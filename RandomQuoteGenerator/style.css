@@ -1,0 +1,160 @@
+:root {
+  --btn-br: 4px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #c9bd95;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(80%, 500px);
+  height: 400px;
+  margin: 0 auto;
+  background-color: #f3f0f0;
+  position: relative;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.quotes-container {
+  min-height: 200px;
+  padding: 1rem 2rem;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+.buttons-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+.btn-generate {
+  border: none;
+  border-radius: var(--btn-br);
+  background-color: #4a2b0f;
+}
+
+.btn-generate:hover {
+  background-color: #6e3f15;
+}
+
+.btn-generate:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.btn-tweet {
+  border: none;
+  border-radius: var(--btn-br);
+  background-color: #1da1f2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-tweet:hover {
+  background-color: #238dcf;
+}
+
+/* Spinner */
+.spinner {
+  position: absolute;
+  margin: 100px auto;
+  top: 100px;
+  right: 45%;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner.hidden {
+  visibility: hidden;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}

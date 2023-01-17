@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --mobile-font: 0.875rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*---------------- Global Variables -------------  */
+
+h3 {
+  font-size: 1.5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/*------x--------- Global Variables -------x-----  */
+
+.container {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/*---------------- Header -------------  */
+
+.container .title {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.container .subheading {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.container .btn-primary {
+  display: block;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  color: white;
+  background-color: #1d4dee;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 1em 2em;
+  margin: 1rem auto;
+}
+
+.container .btn-primary:hover {
+  background-color: #3b67f5;
+}
+
+/*------x--------- Header -------x-----  */
+
+/*---------------- Meal Container -------------  */
+
+.meal-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  /* border: 2px solid red; */
+}
+
+.meal-container h2 {
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.meal-img {
+  max-width: 416px;
+}
+
+.meal-img img {
+  border-radius: 5px;
+  box-shadow: 10px 10px 0px rgba(150, 168, 227, 100%);
+}
+
+/*---------------- Tags and Ingredients -------------  */
+
+.tags-and-ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: var(--mobile-font);
+}
+
+.tags > * {
+  margin: 0.5rem 0;
+}
+
+.tags span {
+  margin-right: 0.5rem;
+}
+
+.ingredients h3 {
+  margin-bottom: 1rem;
+}
+
+.ingredients ul {
+  padding-left: 1rem;
+}
+
+.ingredients ul li {
+  margin: 0.5rem 0;
+}
+
+/*------x--------- Tags and Ingredients -------x-----  */
+
+/*--------------- Meal Instructions ------------  */
+.meal-instructions h3 {
+  margin-bottom: 1rem;
+}
+
+.meal-instructions p {
+  line-height: 1.6;
+  font-size: var(--mobile-font);
+}
+
+/*------x--------- Meal Instructions --------x----  */
+
+/*--------------- Meal Video ------------  */
+
+.meal-video {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.video-wrapper {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*------x--------- Meal Video --------x----  */
+
+/*------x--------- Meal Container --------x----  */
+
+@media (min-width: 980px) {
+  .meal-container {
+    gap: 2rem;
+    place-items: initial;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 50px auto-fit auto-fit 1fr, 1fr);
+  }
+
+  .meal-container h2 {
+    font-size: 2.5rem;
+    margin: 2rem;
+    grid-column: 1 / 5;
+  }
+
+  .meal-container .meal-img {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .meal-container .meal-instructions {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .meal-container .meal-instructions p {
+    font-size: 1rem;
+  }
+
+  .meal-container .tags {
+    grid-column: 4 / 5;
+    grid-row: 2;
+  }
+
+  .meal-container .ingredients {
+    grid-column: 3 / -1;
+    grid-row: 2;
+  }
+
+  .meal-video {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  .meal-video h3 {
+    margin: 1rem;
+  }
+}

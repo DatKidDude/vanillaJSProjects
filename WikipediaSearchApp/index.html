@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki Search</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font / Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Javascript -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <img
+          class="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/657px-Wikipedia-logo-v2.svg.png"
+          alt="Wikipedia Logo"
+        />
+        <form id="form">
+          <input
+            type="search"
+            id="search"
+            class="search-input"
+            name="search"
+            placeholder="Type a keyword and press Enter to search"
+          />
+        </form>
+      </header>
+
+      <div class="sk-circle hidden">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+      </div>
+
+      <section id="search-container" class="search-container"></section>
+      <div class="pagination-container hidden">
+        <button id="prev-btn" class="pagination-btn" aria-label="Previous page">
+          <i class="fa-solid fa-less-than"></i>
+        </button>
+
+        <div id="page-numbers" class="page-numbers"></div>
+
+        <button id="next-btn" class="pagination-btn" aria-label="Next page">
+          <i class="fa-solid fa-greater-than"></i>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!-- <div class="page-numbers">
+  <button class="pagination-number">1</button>
+  <button class="pagination-number">2</button>
+  <button class="pagination-number">3</button>
+  <button class="pagination-number">4</button>
+  <button class="pagination-number">5</button>
+</div> -->
