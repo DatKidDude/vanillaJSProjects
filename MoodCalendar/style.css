@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+
+/*-------- Variables ---------*/
+:root {
+  --happy: #205820;
+  --smile: #2c9c2c;
+  --neutral: #c6d316;
+  --meh: #dba81b;
+  --sadge: #b32020;
+
+  --primary-text-clr: #333;
+
+  --mobile-fs: 1rem;
+  --desktop-fs: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*------------- Global CSS --------------*/
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/*------------- Body --------------*/
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  color: var(--primary-text-clr);
+}
+
+.wrapper {
+  width: min(80%, 1000px);
+  margin: 0 auto;
+}
+
+/*------------- Header --------------*/
+header {
+  text-align: center;
+}
+
+header h2 {
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+header p {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--mobile-fs);
+}
+
+.moods-container {
+  margin-bottom: 0.5rem;
+}
+
+.mood {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  font-size: 2rem;
+}
+
+.mood.selected {
+  background-color: currentColor;
+}
+
+.mood.selected i {
+  color: #fff;
+}
+
+.mood:active {
+  transform: scale(0.9);
+}
+
+.mood1 {
+  color: var(--happy);
+}
+
+.mood2 {
+  color: var(--smile);
+}
+
+.mood3 {
+  color: var(--neutral);
+}
+
+.mood4 {
+  color: var(--meh);
+}
+
+.mood5 {
+  color: var(--sadge);
+}
+
+.action-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
+
+.randomize {
+  background-color: #2c9c2c;
+}
+
+.clear {
+  top: 80px;
+  background-color: #888;
+}
+
+/*------------- Main/Calendar --------------*/
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar > * {
+  flex-basis: 33.3333%;
+}
+
+.month {
+  padding: 5px;
+}
+
+.weekdays_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekdays {
+  margin: 0 5px;
+}
+
+.dates_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dates {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.circle {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: #888;
+  border-radius: 50%;
+  color: white;
+  font-size: 11px;
+}
+
+.circle:hover {
+  scale: 1.1;
+}
